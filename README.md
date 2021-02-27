@@ -5,7 +5,7 @@
 The quickest way to get start with Node.Js, Express & MySQL, just clone the project:
 
 ```bash
-$ git clone https://github.com/sevimezgi/binis_analiz
+$ git clone https://github.com/melikeakyuz/boarding_analysis_backend
 ```
 
 Install dependencies:
