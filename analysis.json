@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "date": "2019-09-04",
+            "route_id": 43,
+            "bus_id": 41,
+            "driver_id": 36,
+            "total_usage_count": 297,
+            "total_usage_amount": 891
+        },
+        {
+            "date": "2020-08-07",
+            "route_id": 5,
+            "bus_id": 19,
+            "driver_id": 16,
+            "total_usage_count": 424,
+            "total_usage_amount": 424
+        },
+        {
+            "date": "2019-04-03",
+            "route_id": 2,
+            "bus_id": 37,
+            "driver_id": 34,
+            "total_usage_count": 536,
+            "total_usage_amount": 1072
+        },
+        {
+            "date": "2019-10-05",
+            "route_id": 49,
+            "bus_id": 37,
+            "driver_id": 2,
+            "total_usage_count": 671,
+            "total_usage_amount": 1342
+        },
+        {
+            "date": "2019-12-02",
+            "route_id": 1,
+            "bus_id": 20,
+            "driver_id": 25,
+            "total_usage_count": 476,
+            "total_usage_amount": 476
+        },
+        {
+            "date": "2020-09-01",
+            "route_id": 15,
+            "bus_id": 27,
+            "driver_id": 21,
+            "total_usage_count": 640,
+            "total_usage_amount": 640
+        },
+        {
+            "date": "2019-07-05",
+            "route_id": 10,
+            "bus_id": 24,
+            "driver_id": 15,
+            "total_usage_count": 611,
+            "total_usage_amount": 611
+        },
+        {
+            "date": "2020-04-03",
+            "route_id": 95,
+            "bus_id": 13,
+            "driver_id": 36,
+            "total_usage_count": 393,
+            "total_usage_amount": 1179
+        },
+        {
+            "date": "2020-04-07",
+            "route_id": 16,
+            "bus_id": 35,
+            "driver_id": 6,
+            "total_usage_count": 546,
+            "total_usage_amount": 546
+        },
+        {
+            "date": "2019-12-01",
+            "route_id": 9,
+            "bus_id": 6,
+            "driver_id": 8,
+            "total_usage_count": 666,
+            "total_usage_amount": 666
+        }
+    ]
+}

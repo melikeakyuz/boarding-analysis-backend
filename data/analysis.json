@@ -1,0 +1,49 @@
+{
+	"data": [
+	{
+		"date":"2020-08-18",
+		"media_number":11111111,
+		"bus_id":21,
+		"driver_id":5,
+		"route_id":152,
+		"total_usage_count":50,
+		"total_usage_amount":200
+	},
+	{
+		"date":"2020-08-18",
+		"media_number":11111111,
+		"bus_id":22,
+		"driver_id":5,
+		"route_id":152,
+		"total_usage_count":40,
+		"total_usage_amount":100
+	},
+	{
+		"date":"2020-08-18",
+		"media_number":11111111,
+		"bus_id": 21 ,
+		"driver_id": 15 ,
+		"route_id": 152 ,
+		"total_usage_count": 30 ,
+		"total_usage_amount": 150 
+	},
+		{
+		"date":"2020-08-24",
+		"media_number":11111111,
+		"bus_id": 22 ,
+		"driver_id": 15 ,
+		"route_id": 887 ,
+		"total_usage_count": 60 ,
+		"total_usage_amount": 200 
+	},
+	{
+		"date":"2020-08-18",
+		"media_number": 11111111 ,
+		"bus_id": 21 ,
+		"driver_id": 15 ,
+		"route_id": 887 ,
+		"total_usage_count": 20 ,
+		"total_usage_amount": 120 
+	}
+	]
+}

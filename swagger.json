@@ -1,0 +1,581 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Analysis Project",
+    "description": "Analysis Project Application API",
+    "license": {
+      "name": "Boarding Analysis"
+    }
+  },
+  "host": "localhost:8585",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "analysis",
+      "description": ""
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/x-www-form-urlencoded", "multipart/form-data"],
+  "produces": ["application/xml", "application/json"],
+  "paths": {
+    "/login": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Login",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "formData",
+            "description": "The user name for login",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "description": "The password for login in clear text",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Login is successful"
+          }
+        }
+      }
+    }, 
+    "/daily/date": {
+      "get": {
+        "tags": ["Daily Data"],
+        "summary": "Daily date data",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/daily/bus": {
+      "get": {
+        "tags": ["Daily Data"],
+        "summary": "Daily bus data",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/daily/driver": {
+      "get": {
+        "tags": ["Daily Data"],
+        "summary": "Daily driver data",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/daily/route": {
+      "get": {
+        "tags": ["Daily Data"],
+        "summary": "Daily route data",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          }
+        }
+      }
+    },
+    "/daily/update": {
+      "post": {
+        "tags": ["Daily Data"],
+        "summary": "Daily data update",
+        "description": "Daily data is updated from JSON file",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Daily data is updated",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          }
+        }
+      }
+    },
+    "/analysis/findAll": {
+      "get": {
+        "tags": ["Analysis"],
+        "summary": "Get all analysis in the system",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/analysis/day": {
+      "get": {
+        "tags": ["Analysis"],
+        "summary": "Get the most amount for day in last 2 months in the system",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/analysis/route": {
+      "get": {
+        "tags": ["Analysis"],
+        "summary": "Get the most amount for route in last 2 months in the system",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/analysis/driver": {
+      "get": {
+        "tags": ["Analysis"],
+        "summary": "Get the most amount for driver in last 2 months in the system",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/analysis/bus": {
+      "get": {
+        "tags": ["Analysis"],
+        "summary": "Get the most amount for bus in last 2 months in the system",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/analysis/add": {
+      "post": {
+        "tags": ["Analysis"],
+        "summary": "Create new analysis",
+        "description": "Create new analysis in system",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          },
+          {
+            "name": "date",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "format": "yyyy-MM-dd",
+            "description": "Enter a date"
+          },
+          {
+            "name": "route_id",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": "Enter a route ID"
+          },
+          {
+            "name": "bus_id",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": "Enter a bus ID"
+          },
+          {
+            "name": "driver_id",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": "Enter a driver ID"
+          },
+          {
+            "name": "company_id",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": "Enter a company ID"
+          },
+          {
+            "name": "total_usage_count",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": "Enter a total usage count"
+          },
+          {
+            "name": "total_usage_amount",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": "Enter a total usage amount"
+          },
+          {
+            "name": "analysis",
+            "in": "body",
+            "description": "Analysis that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "New analysis is created",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          }
+        }
+      }
+    },
+    "/analysis/update/{bus_id}": {
+      "put": {
+        "summary": "Update analysis with given bus ID",
+        "tags": ["Analysis"],
+
+        "parameters": [
+          {
+            "name": "bus_id",
+            "in": "path",
+            "description": "ID of bus for update",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          },
+          {
+            "name": "date",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "yyyy-MM-dd",
+            "description": "Enter a date"
+          },
+          {
+            "name": "route_id",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "description": "Enter a route ID"
+          },
+          {
+            "name": "bus_id",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "description": "Enter a bus ID"
+          },
+          {
+            "name": "driver_id",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "description": "Enter a driver ID"
+          },
+          {
+            "name": "company_id",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "description": "Enter a company ID"
+          },
+          {
+            "name": "total_usage_count",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "description": "Enter a total usage count"
+          },
+          {
+            "name": "total_usage_amount",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "description": "Enter a total usage amount"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Analysis is updated",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "invalid bus id"
+          },
+          "404": {
+            "description": "bus id not found"
+          }
+        }
+      }
+    },
+    "/analysis/delete/{bus_id}": {
+      "delete": {
+        "summary": "Delete analysis with given bus ID",
+        "tags": ["Analysis"],
+        "parameters": [
+          {
+            "name": "bus_id",
+            "in": "path",
+            "required": true,
+            "description": "ID of bus for delete",
+            "type": "integer"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Authentication"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Analysis is deleted",
+            "schema": {
+              "$ref": "#/definitions/Analysis"
+            }
+          },
+          "400": {
+            "description": "invalid bus id"
+          },
+          "404": {
+            "description": "bus id not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Analysis": {
+      "required": [
+        "date",
+        "route_id",
+        "bus_id",
+        "driver_id",
+        "company_id",
+        "total_usage_count",
+        "total_usage_amount"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "route_id": {
+          "type": "integer"
+        },
+        "bus_id": {
+          "type": "integer"
+        },
+        "driver_id": {
+          "type": "integer"
+        },
+        "company_id": {
+          "type": "integer"
+        },
+        "total_usage_count": {
+          "type": "integer"
+        },
+        "total_usage_amount": {
+          "type": "integer"
+        }
+      }
+    },
+    "dailyData": {
+      "required": [
+        "date",
+        "media_number",
+        "bus_id",
+        "driver_id",
+        "route_id",
+        "total_usage_count",
+        "total_usage_amount"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "media_number": {
+          "type": "integer"
+        },
+        "bus_id": {
+          "type": "integer"
+        },
+        "driver_id": {
+          "type": "integer"
+        },
+        "route_id": {
+          "type": "integer"
+        },
+        "total_usage_count": {
+          "type": "integer"
+        },
+        "total_usage_amount": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
